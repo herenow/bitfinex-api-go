@@ -42,8 +42,8 @@ func (nr *NewRequest) MarshalJSON() ([]byte, error) {
 // EnrichedPayload returns enriched representation of order struct for submission
 func (nr *NewRequest) EnrichedPayload() interface{} {
 	pld := struct {
-		GID           int64                  `json:"gid"`
-		CID           int64                  `json:"cid"`
+		GID           int64                  `json:"gid,omitempty"`
+		CID           int64                  `json:"cid,omitempty"`
 		Type          string                 `json:"type"`
 		Symbol        string                 `json:"symbol"`
 		Amount        float64                `json:"amount,string"`

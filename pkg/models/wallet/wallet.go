@@ -33,6 +33,7 @@ func FromRaw(raw []interface{}) (w *Wallet, err error) {
 		Currency:          convert.SValOrEmpty(raw[1]),
 		Balance:           convert.F64ValOrZero(raw[2]),
 		UnsettledInterest: convert.F64ValOrZero(raw[3]),
+		BalanceAvailable:  convert.F64ValOrZero(raw[4]),
 	}
 
 	return
